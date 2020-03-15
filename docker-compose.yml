@@ -1,0 +1,17 @@
+version: '3'
+services:
+  node:
+    image: node:13.8.0-alpine
+    tty: true
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - node-modules:/var/www/node_modules
+    ports:
+      - 3000:3000
+    environment:
+        PORT: 3000
+        HOST: 0.0.0.0
+
+volumes:
+  node-modules:

@@ -1,0 +1,45 @@
+{
+  "name": "serverless-nuxt",
+  "version": "1.0.0",
+  "description": "Nuxt.js SSR Typescript on AWS Lambda@Edge + S3",
+  "author": "Karibash",
+  "private": true,
+  "repository": "https://github.com/Karibash/serverless-nuxt",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development IS_LOCAL=true ts-node serverless/local.ts",
+    "prod": "NODE_ENV=production IS_LOCAL=true node .serverless_nuxt/local.js",
+    "build": "NODE_ENV=production IS_LOCAL=true nuxt-ts build",
+    "postbuild": "rm -rf .serverless_nuxt/server/ && webpack && npm install --production --prefix .serverless_nuxt",
+    "deploy": "sls --debug",
+    "undeploy": "sls remove --debug"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "@vue/composition-api": "^0.4.0",
+    "nuxt": "^2.11.0"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^0.5.8",
+    "@nuxt/typescript-runtime": "^0.3.10",
+    "@serverless/aws-cloudfront": "^6.0.0",
+    "@serverless/aws-lambda": "^3.0.0",
+    "@serverless/aws-s3": "^4.2.0",
+    "@serverless/core": "^1.1.2",
+    "@serverless/domain": "^6.1.0",
+    "@types/aws-lambda": "^8.10.46",
+    "aws-serverless-express-edge": "git+https://github.com/Karibash/aws-serverless-express-edge.git",
+    "copy-webpack-plugin": "^5.1.1",
+    "express": "^4.16.4",
+    "serverless": "^1.65.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpackbar": "^4.0.0"
+  }
+}
