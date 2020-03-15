@@ -54,3 +54,7 @@ Deployment serverless:
 $ npm run build
 $ npm run deploy
 ```
+
+### Architecture
+
+![architecture](./architecture.png)
