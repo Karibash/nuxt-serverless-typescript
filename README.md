@@ -7,9 +7,9 @@ Nuxt.js Serverless Starter Kit
 - Nuxt.js v2.11.0
 - AWS Serverless Express
 - TypeScript
+- TailwindCSS
 - Stylus
 - PWA Module
-- Sanitize CSS
 
 ## Build Setup
 

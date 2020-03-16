@@ -29,7 +29,6 @@ const config: Configuration = {
   },
   loading: { color: '#fff' },
   css: [
-    '~/assets/css/sanitize.css',
   ],
   plugins: [
     // Doc: https://github.com/vuejs/composition-api
@@ -38,6 +37,8 @@ const config: Configuration = {
   buildModules: [
     // Doc: https://github.com/nuxt/typescript
     requireBuildModule('@nuxt/typescript-build'),
+    // Doc: https://tailwindcss.com/
+    requireBuildModule('@nuxtjs/tailwindcss'),
   ].filter(Boolean),
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
@@ -46,6 +47,7 @@ const config: Configuration = {
     '@nuxtjs/pwa',
   ],
   build: {
+    standalone: true,
     extend (config: WebpackConfiguration, ctx: any) {
     },
   },

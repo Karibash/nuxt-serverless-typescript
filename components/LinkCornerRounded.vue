@@ -12,10 +12,14 @@
 
 <script lang="ts">
 import { computed, defineComponent } from "@vue/composition-api";
+const resolveConfig = require('tailwindcss/resolveConfig');
+const tailwindConfig = require('../tailwind.config.js');
+const config = resolveConfig(tailwindConfig);
 
 type Props = {
   text: string;
   color: string;
+  brightness: string;
   href: string;
 };
 
@@ -28,6 +32,17 @@ export default defineComponent({
     color: {
       type: String,
       required: true,
+      validator(value) {
+        return Object.keys(config.theme.colors).indexOf(value) !== -1;
+      },
+    },
+    brightness: {
+      type: String,
+      required: false,
+      default: '500',
+      validator(value) {
+        return Object.keys(config.theme.colors.gray).indexOf(value) !== -1;
+      },
     },
     href: {
       type: String,
@@ -36,9 +51,12 @@ export default defineComponent({
   },
   setup(props: Props) {
     const colorVariable = computed(() => {
-      return {
-        '--hex-color': props.color,
-      };
+      const colorSet = config.theme.colors[props.color];
+      if (typeof (colorSet) == "string" || colorSet instanceof String) {
+        return { '--hex-color': colorSet };
+      } else {
+        return { '--hex-color': colorSet[props.brightness] };
+      }
     });
 
     return {

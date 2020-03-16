@@ -1,21 +1,23 @@
 <template>
   <div id="page-index">
     <LogoNuxt />
-    <h1 class="title">
+    <h1 class="font-light text-6xl text-gray-800">
       {{ title }}
     </h1>
-    <h2 class="subtitle">
+    <h2 class="font-light text-4xl text-gray-700">
       {{ description }}
     </h2>
-    <div class="links">
+    <div class="m-4">
       <LinkCornerRounded
         text="Twitter"
-        color="#2f855a"
+        color="green"
+        brightness="700"
         :href="twitter"
       />
       <LinkCornerRounded
         text="GitHub"
-        color="#4a5568"
+        color="gray"
+        brightness="700"
         :href="github"
       />
     </div>
@@ -53,21 +55,8 @@ export default defineComponent({
   display flex
   flex-direction column
   min-height 100vh
-  margin 0 auto
   justify-content center
   align-items center
   text-align center
-
-  > .title {
-    font-weight 300
-    font-size 4rem
-    color #2d3748
-  }
-
-  .subtitle {
-    font-weight 300
-    font-size 2rem
-    color #4a5568
-  }
 }
 </style>
