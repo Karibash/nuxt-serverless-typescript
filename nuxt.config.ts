@@ -9,12 +9,6 @@ function requireBuildModule(module: string): string {
 
 const config: Configuration = {
   mode: 'universal',
-  env: {
-    APP_NAME: process.env.npm_package_name || 'serverless-nuxt',
-    APP_DESCRIPTION: process.env.npm_package_description || '',
-    AUTHOR_TWITTER: 'https://twitter.com/karibash',
-    GITHUB_REPOSITORY: process.env.npm_package_homepage || '',
-  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -35,6 +29,8 @@ const config: Configuration = {
     '~/plugins/composition-api',
   ],
   buildModules: [
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    requireBuildModule('@nuxtjs/dotenv'),
     // Doc: https://github.com/nuxt/typescript
     requireBuildModule('@nuxt/typescript-build'),
     // Doc: https://tailwindcss.com/
@@ -78,5 +74,4 @@ const config: Configuration = {
     },
   },
 };
-// export default config;
 module.exports = config;

@@ -10,6 +10,7 @@ Nuxt.js Serverless Starter Kit
 - TailwindCSS
 - Stylus
 - PWA Module
+- dotenv Module
 
 ## Build Setup
 

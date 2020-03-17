@@ -23,6 +23,7 @@
   "devDependencies": {
     "@nuxt/typescript-build": "^0.5.8",
     "@nuxt/typescript-runtime": "^0.3.10",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/tailwindcss": "^1.4.0",
     "@serverless/aws-cloudfront": "^6.0.0",
     "@serverless/aws-lambda": "^3.0.0",
