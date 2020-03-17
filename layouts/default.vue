@@ -1,5 +1,5 @@
 <template>
-  <div id="layout-default">
+  <div id="layout-default" class="font-noto-sans-jp">
     <nuxt />
   </div>
 </template>

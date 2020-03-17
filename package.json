@@ -35,6 +35,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "express": "^4.16.4",
     "nuxt-purgecss": "^0.2.1",
+    "nuxt-webfontloader": "^1.1.0",
     "serverless": "^1.65.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",

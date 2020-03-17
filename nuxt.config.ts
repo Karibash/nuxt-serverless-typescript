@@ -35,6 +35,8 @@ const config: Configuration = {
     requireBuildModule('@nuxt/typescript-build'),
     // Doc: https://tailwindcss.com/
     requireBuildModule('@nuxtjs/tailwindcss'),
+    // Doc: https://github.com/Developmint/nuxt-webfontloader
+    requireBuildModule('nuxt-webfontloader'),
   ].filter(Boolean),
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
@@ -71,6 +73,16 @@ const config: Configuration = {
   pwa: {
     workbox: {
       swDest: path.resolve(__dirname, '.serverless_nuxt/static/sw.js'),
+    },
+  },
+  /*
+  ** WebFontLoader configuration
+  */
+  webfontloader: {
+    google: {
+      families: [
+        'Noto+Sans+JP:300,400&display=swap',
+      ],
     },
   },
 };

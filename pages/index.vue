@@ -1,7 +1,7 @@
 <template>
   <div id="page-index">
     <LogoNuxt />
-    <h1 class="font-light text-6xl text-gray-800">
+    <h1 class="font-medium text-6xl text-gray-800">
       {{ title }}
     </h1>
     <h2 class="font-light text-4xl text-gray-700">
