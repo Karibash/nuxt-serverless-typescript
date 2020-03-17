@@ -15,7 +15,7 @@ class NuxtJsComponent extends Component {
         ]);
 
         const bucketOutputs = await bucket({
-            accelerated: true,
+            accelerated: false,
             name: `${name}-assets-bucket`,
         });
 
