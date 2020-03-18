@@ -15,16 +15,16 @@
     "undeploy": "sls remove --debug"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0",
     "@vue/composition-api": "^0.4.0",
     "nuxt": "^2.12.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.5.8",
     "@nuxt/typescript-runtime": "^0.3.10",
+    "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/tailwindcss": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
     "@serverless/aws-cloudfront": "^6.0.0",
     "@serverless/aws-lambda": "^3.0.0",
     "@serverless/aws-s3": "^4.2.0",

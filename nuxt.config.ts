@@ -29,20 +29,20 @@ const config: Configuration = {
     '~/plugins/composition-api',
   ],
   buildModules: [
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    requireBuildModule('@nuxtjs/dotenv'),
     // Doc: https://github.com/nuxt/typescript
     requireBuildModule('@nuxt/typescript-build'),
+    // Doc: https://axios.nuxtjs.org/usage
+    requireBuildModule('@nuxtjs/axios'),
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    requireBuildModule('@nuxtjs/dotenv'),
     // Doc: https://tailwindcss.com/
     requireBuildModule('@nuxtjs/tailwindcss'),
+    // Doc: https://pwa.nuxtjs.org
+    requireBuildModule('@nuxtjs/pwa'),
     // Doc: https://github.com/Developmint/nuxt-webfontloader
     requireBuildModule('nuxt-webfontloader'),
   ].filter(Boolean),
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    // Doc: https://pwa.nuxtjs.org
-    '@nuxtjs/pwa',
   ],
   build: {
     standalone: true,
