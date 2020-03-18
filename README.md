@@ -4,7 +4,7 @@ Nuxt.js Serverless Starter Kit
 
 ### Pre-Installed
 
-- Nuxt.js v2.11.0
+- Nuxt.js v2.12.0
 - AWS Serverless Express
 - TypeScript
 - TailwindCSS
